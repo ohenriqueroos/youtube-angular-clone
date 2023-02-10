@@ -1,1 +1,168 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+// Cores
+$primary-color: #ff0000;
+$secondary-color: #a70000;
+$background-color: #000;
+$light-dark-color: #222222;
+$scroll-color: #797979;
+$white-color: #fff;
+
+// Global Settings
+body {
+    color: $white-color;
+    background-color: $background-color;
+}
+
+header {
+    margin: 0;
+    padding-inline: 2rem;
+    width: 100vw;
+    height: fit-content;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: $white-color;
+    text-decoration: none;
+    outline: none;
+}
+
+span {
+    font-size: 1.1rem
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 8px;
+    background: $background-color;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: $scroll-color;
+}
+
+// Header
+.open-menu {
+    background-color: transparent;
+    font-size: 1.6rem;
+    color: $white-color;
+}
+
+.logo-youtube svg {
+    width: 6rem;
+    height: auto;
+}
+
+    // Search
+.search {
+    input {
+        margin: 0;
+        padding-left: 1rem;
+        width: 30rem;
+        height: 2.4rem;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid $light-dark-color;
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    .bi-keyboard {
+        left: -2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn-search {
+        left: -1rem;
+        width: 4rem;
+        height: 2.4rem;
+        color: $white-color;
+        background-color: $light-dark-color;
+        border: none;
+        border-radius: 0 2rem 2rem 0;
+        position: relative;
+    }
+}
+
+.search-voice {
+    .btn-search-voice {
+        width: 2.4rem;
+        height: 2.4rem;
+        color: $white-color;
+        background-color: $light-dark-color;
+        border: none;
+        border-radius: 100%;
+    }
+}
+
+    // Perfil Area
+.btn-create,
+.bi-bell,
+.open-perfil {
+    font-size: 1.4rem;
+}
+
+// Sidebar
+.sidebar {
+    width: 16rem;
+    height: 90vh;
+    overflow: hidden;
+    position: fixed;
+
+    &:hover {
+        overflow: scroll;
+    }
+
+    .navbar-nav {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-item {
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        i {
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            width: 100%;
+            background-color: $light-dark-color;
+            border-radius: .5rem;
+        }
+    }
+
+    .active {
+        width: 100%;
+        background-color: $light-dark-color;
+        border-radius: .5rem;
+    }
+
+    .useful-links {
+        padding-left: 2rem;
+
+        a {
+            font-size: .9rem;
+            opacity: 60%;
+        }
+
+        span {
+            font-size: .75rem;
+            opacity: 60%;
+        }
+    }
+}
