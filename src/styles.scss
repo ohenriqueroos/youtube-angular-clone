@@ -40,6 +40,11 @@ span {
     font-size: 1.1rem
 }
 
+button {
+    border: none;
+    outline: none;
+}
+
 .hidden {
     display: none;
 }
@@ -122,6 +127,7 @@ span {
     height: 90vh;
     overflow: hidden;
     position: fixed;
+    transition: all .2s linear;
 
     &:hover {
         overflow: scroll;
@@ -175,6 +181,7 @@ span {
     width: 5rem;
     height: 100vh;
     position: fixed;
+    transition: all .2s linear;
 
     i {
         font-size: 1.5rem;

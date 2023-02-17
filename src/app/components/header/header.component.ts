@@ -1,5 +1,5 @@
 import { ToggleMenuService } from './../../shared/toggle-menu.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  bntMenu: any = document.querySelector('.open-menu')
-
+  @Output() toggle = new EventEmitter<any>();
   constructor(toggleMenuService: ToggleMenuService) { 
-    this.bntMenu = toggleMenuService.toggleMenu();
+  }
+
+  toggleSidemenu() {
+    this.toggle.emit(true);
   }
 
   ngOnInit(): void {

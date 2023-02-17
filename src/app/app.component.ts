@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @Input() sidebar: boolean = false;
   title = 'movies-and-series';
+  closed: boolean = false;
 
-  openSidebar() {
-    this.sidebar = !this.sidebar;
+  toggleMenu() {
+    console.log()
+    this.closed = !this.closed  
   }
-}
+} 

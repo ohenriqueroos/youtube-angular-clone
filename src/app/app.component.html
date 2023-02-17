@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (toggle)="toggleMenu()"></app-header>
 <main class="mt-4">
-    <app-menu (sidebar)="openSidebar()"></app-menu>
+    <app-menu [hidden]="closed"></app-menu>
 </main>
