@@ -1,3 +1,4 @@
+import { ToggleMenuService } from './shared/toggle-menu.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,13 +11,13 @@ import { HeaderComponent } from './components/header/header.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ToggleMenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

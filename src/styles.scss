@@ -40,6 +40,10 @@ span {
     font-size: 1.1rem
 }
 
+.hidden {
+    display: none;
+}
+
 // Scrollbar
 ::-webkit-scrollbar {
     width: 8px;
@@ -164,5 +168,19 @@ span {
             font-size: .75rem;
             opacity: 60%;
         }
+    }
+}
+
+.short-sidebar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    a {
+        font-size: .8rem;
     }
 }
