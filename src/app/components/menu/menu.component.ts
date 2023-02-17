@@ -1,5 +1,6 @@
 import { ToggleMenuService } from './../../shared/toggle-menu.service';
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-menu',
@@ -8,13 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  @Input() hidden!: boolean;
+  hidden!: Observable<boolean>;
 
 
-  constructor(ToggleMenuService: ToggleMenuService) {
+  constructor(private ToggleMenuService: ToggleMenuService) {
 
-   }
+  }
 
   ngOnInit(): void {
+    this.hidden = this.ToggleMenuService.menuSelected$
   }
 }

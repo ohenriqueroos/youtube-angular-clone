@@ -7,12 +7,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() toggle = new EventEmitter<any>();
-  constructor(toggleMenuService: ToggleMenuService) { 
+  constructor(private toggleMenuService: ToggleMenuService) { 
   }
 
   toggleSidemenu() {
-    this.toggle.emit(true);
+    this.toggleMenuService.toggleMenu()
   }
 
   ngOnInit(): void {

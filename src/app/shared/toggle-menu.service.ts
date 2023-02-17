@@ -1,9 +1,16 @@
-import { Injectable, Input } from '@angular/core';
-
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class ToggleMenuService {
+  hidden!: boolean;
+  private menuToggle$ = new BehaviorSubject<boolean>(false);
+  menuSelected$ = this.menuToggle$.asObservable();
+  constructor() {}
 
-  constructor() { }
+  toggleMenu() {
+    this.menuSelected$.subscribe(value => this.hidden = !value)
+    this.menuToggle$.next(this.hidden);
+  }
 }
