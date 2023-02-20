@@ -10,8 +10,12 @@ $primary-color: #ff0000;
 $secondary-color: #a70000;
 $background-color: #000;
 $light-dark-color: #222222;
+$dark-color: #353535;
 $scroll-color: #797979;
 $white-color: #fff;
+
+// Variables
+$transition: all .2s linear;
 
 // Global Settings
 body {
@@ -26,7 +30,11 @@ header {
     height: fit-content;
 }
 
-p {
+main {
+    display: flex;
+}
+
+h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 
@@ -43,6 +51,10 @@ span {
 button {
     border: none;
     outline: none;
+}
+
+input {
+    color: $white-color;
 }
 
 .hidden {
@@ -100,6 +112,11 @@ button {
         border: none;
         border-radius: 0 2rem 2rem 0;
         position: relative;
+        transition: $transition;
+
+        &:hover {
+            background-color: $dark-color;
+        }
     }
 }
 
@@ -111,6 +128,11 @@ button {
         background-color: $light-dark-color;
         border: none;
         border-radius: 100%;
+        transition: $transition;
+
+        &:hover {
+            background-color: $dark-color;
+        }
     }
 }
 
@@ -126,11 +148,13 @@ button {
     width: 16rem;
     height: 90vh;
     overflow: hidden;
+    background-color: $background-color;
     position: fixed;
     transition: all .2s linear;
 
     &:hover {
         overflow: scroll;
+        overflow-x: hidden;
     }
 
     .navbar-nav {
@@ -177,9 +201,11 @@ button {
     }
 }
 
+//Short sidebar
 .short-sidebar {
     width: 5rem;
     height: 100vh;
+    background-color: $background-color;
     position: fixed;
     transition: all .2s linear;
 
@@ -189,5 +215,47 @@ button {
 
     a {
         font-size: .8rem;
+    }
+}
+
+.close {
+    margin-left: 8rem;
+}
+
+.open {
+    margin-left: 18rem;
+}
+
+//Cards
+.card-container {
+    max-width: 20rem;
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5, span {
+        font-size: .8rem;
+        opacity: 60%;
+        transition: $transition;
+    }
+
+    .card-image {
+        margin-bottom: 1rem;
+        height: 10rem;
+    }
+    
+    .card-image img {
+        width: 100%;
+        border-radius: .375rem;
+    }
+    
+    .card-channel-image img {
+        width: 100%;
+        border-radius: 100%;
+    }
+
+    .name-channel h5:hover {
+        opacity: 100%;
     }
 }
