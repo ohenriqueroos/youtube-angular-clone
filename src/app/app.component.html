@@ -1,5 +1,7 @@
 <app-header (toggle)="toggleMenu()"></app-header>
 <main class="mt-4">
     <app-menu [hidden]="closed"></app-menu>
-    <app-cards class="close"></app-cards>
+    <div class="content">
+        <app-cards class="open"></app-cards>
+    </div>
 </main>

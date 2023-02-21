@@ -1,25 +1,27 @@
-<div *ngFor="let card of cards" class="card-container">
-    <div class="row">
-        <div class="card-image">
-            <img [src]="card.image" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <div class="card-channel-image">
-                <img [src]="card.imageChannel" alt="">
+<div class="card-container">
+    <div *ngFor="let card of cards">
+        <div class="row">
+            <div class="card-image">
+                <img [src]="card.image" alt="">
             </div>
         </div>
-        <div class="col-10">
-            <div class="row flex-column g-2">
-                <div class="col">
-                    <h4>{{ card.title }}</h4>
+        <div class="row">
+            <div class="col-2">
+                <div class="card-channel-image">
+                    <img [src]="card.imageChannel" alt="">
                 </div>
-                <div class="col">
-                    <a class="name-channel" href="#">
-                        <h5>{{ card.nameChannel }}</h5>
-                    </a>
-                    <span>{{ card.views }} visualizações - há {{ card.days }}</span>
+            </div>
+            <div class="col-10">
+                <div class="row flex-column g-2">
+                    <div class="col">
+                        <h4>{{ card.title }}</h4>
+                    </div>
+                    <div class="col">
+                        <a class="name-channel" href="#">
+                            <h5>{{ card.nameChannel }}</h5>
+                        </a>
+                        <span>{{ card.views }} visualizações - há {{ card.days }}</span>
+                    </div>
                 </div>
             </div>
         </div>

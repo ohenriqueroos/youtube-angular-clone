@@ -227,8 +227,14 @@ input {
 }
 
 //Cards
+.cards-container {
+    margin-left: 18rem;
+}
+
 .card-container {
     max-width: 20rem;
+    display: flex;
+    gap: 2.5rem;
 
     h4 {
         font-size: 1.2rem;
@@ -241,15 +247,19 @@ input {
     }
 
     .card-image img {
-        width: fit-content;
+        left: -.1%;
         height: auto;
-        border-radius: .375rem;
+        width: 18rem;
+        position: absolute;
     }
     
     .card-image {
         margin-bottom: 1rem;
         height: 10rem;
-        width: 20rem;
+        width: 18rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: .5rem !important;
     }
     
     .card-channel-image img {

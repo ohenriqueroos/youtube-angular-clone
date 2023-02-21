@@ -4,8 +4,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ToggleMenuService {
-  hidden: boolean = true;
-  private menuToggle$ = new BehaviorSubject<boolean>(false);
+  hidden!: boolean;
+  private menuToggle$ = new BehaviorSubject<boolean>(true);
   menuSelected$ = this.menuToggle$.asObservable();
   
   constructor() {}
