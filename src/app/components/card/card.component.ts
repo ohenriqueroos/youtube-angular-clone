@@ -13,7 +13,7 @@ export class CardComponent implements OnInit {
       "imageChannel": "https://images.pexels.com/photos/13471116/pexels-photo-13471116.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "views": "50 mil",
       "days": "10 dias"
-    }
+    },
   ]
 
   constructor() { }
