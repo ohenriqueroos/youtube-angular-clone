@@ -21,6 +21,7 @@ $transition: all .2s linear;
 body {
     color: $white-color;
     background-color: $background-color;
+    overflow-x: hidden;
 }
 
 header {
@@ -177,6 +178,7 @@ input {
             width: 100%;
             background-color: $light-dark-color;
             border-radius: .5rem;
+            cursor: pointer;
         }
     }
 
@@ -218,17 +220,12 @@ input {
     }
 }
 
-.close {
-    margin-left: 8rem;
-}
-
-.open {
-    margin-left: 18rem;
-}
-
-//Cards
+// Cards
 .cards-container {
     margin-left: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .card-container {
@@ -237,7 +234,7 @@ input {
     gap: 2.5rem;
 
     h4 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     h5, span {

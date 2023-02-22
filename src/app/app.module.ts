@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { CardComponent } from './components/card/card.component';
+import { CardsService } from './shared/cards.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CardComponent } from './components/card/card.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ToggleMenuService],
+  providers: [ToggleMenuService, CardsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
