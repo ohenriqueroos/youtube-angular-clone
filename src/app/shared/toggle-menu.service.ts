@@ -13,10 +13,5 @@ export class ToggleMenuService {
   toggleMenu() {
     this.menuSelected$.subscribe(value => this.hidden = !value)
     this.menuToggle$.next(this.hidden)
-    if(this.hidden === true) {
-      console.log('É true')
-    } else {
-      console.log('É false')
-    }
   }
 }

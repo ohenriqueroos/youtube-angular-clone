@@ -41,4 +41,8 @@ export class CardsService {
   ];
 
   constructor() { }
+
+  addNewCard(card: Card) {
+    this.cards.push(card)
+  }
 }
