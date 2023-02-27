@@ -1,26 +1,26 @@
 <div class="container">
-    <div *ngFor="let card of videos" class="card-container">
+    <div *ngFor="let video of videos | async" class="card-container">
         <div class="row">
             <div class="card-image">
-                <img [src]="card.image" alt="">
+                <img [src]="video.image" alt="">
             </div>
         </div>
         <div class="row">
             <div class="col-2">
                 <div class="card-channel-image">
-                    <img [src]="card.imageChannel" alt="">
+                    <img [src]="video.imageChannel" alt="">
                 </div>
             </div>
             <div class="col-10">
                 <div class="row flex-column g-2">
                     <div class="col">
-                        <h4>{{ card.title }}</h4>
+                        <h4>{{ video.title }}</h4>
                     </div>
                     <div class="col">
                         <a class="name-channel" href="#">
-                            <h5>{{ card.nameChannel }}</h5>
+                            <h5>{{ video.nameChannel }}</h5>
                         </a>
-                        <span>{{ card.views }} visualizações - há {{ card.days }}</span>
+                        <span>{{ video.views }} visualizações - há {{ video.days }}</span>
                     </div>
                 </div>
             </div>

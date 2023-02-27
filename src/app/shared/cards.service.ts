@@ -46,11 +46,9 @@ export class CardsService implements OnInit {
 
   ngOnInit() { }
 
-  getCards() {
+  getVideos() {
     const url: string = 'http://localhost:3000/videos'
-    this.http.get(url).subscribe((response) => {
-      this.videos = response;
-    })
+    return this.http.get<Card[]>(url)
   }
 
   addNewCard(card: Card) {

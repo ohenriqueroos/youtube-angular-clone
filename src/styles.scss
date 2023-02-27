@@ -43,6 +43,9 @@ a {
     color: $white-color;
     text-decoration: none;
     outline: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
 }
 
 span {
@@ -153,19 +156,22 @@ input {
     position: fixed;
     transition: all .2s linear;
 
+    .nav-link {
+        padding-left: 1rem;
+        width: 100%;
+    }
+
     &:hover {
         overflow: scroll;
         overflow-x: hidden;
     }
 
     .navbar-nav {
-        padding-left: 1rem;
         display: flex;
         flex-direction: column;
     }
 
     .nav-item {
-        padding-left: 1rem;
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -198,7 +204,7 @@ input {
 
         span {
             font-size: .75rem;
-            opacity: 60%;
+            opacity: 60%
         }
     }
 }

@@ -8,7 +8,7 @@ import { Card } from './Card';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() videos: any;
+  videos: any;
   newCard: Card = {
     image: "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80",
     title: "HTML, CSS and JavaScript Course - 01",
@@ -23,7 +23,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     // this.cards = this.cardsService.cards
     // this.cardsService.addNewCard(this.newCard)
-    this.videos = this.cardsService.getCards()
+    this.videos = this.cardsService.getVideos()
   }
 
 }

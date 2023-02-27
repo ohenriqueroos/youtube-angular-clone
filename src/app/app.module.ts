@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { CardComponent } from './components/card/card.component';
 import { CardsService } from './shared/cards.service';
+import { ShortsComponent } from './components/shorts/shorts.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CardsService } from './shared/cards.service';
     HeaderComponent,
     CardsComponent,
     CardComponent,
+    ShortsComponent,
   ],
   imports: [
     BrowserModule,
