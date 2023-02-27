@@ -1,1 +1,5 @@
-<p>shorts works!</p>
+<div [ngClass]="(menuStatus | async) ? 'open' : 'close'">
+    <div class="container">
+        <p>shorts works!</p>
+    </div>
+</div>

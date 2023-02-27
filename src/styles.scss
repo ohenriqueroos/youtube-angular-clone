@@ -218,6 +218,7 @@ input {
     transition: all .2s linear;
 
     i {
+        padding-left: 1rem;
         font-size: 1.5rem;
     }
 
@@ -277,4 +278,13 @@ input {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
+}
+
+// Open and Close Classes
+.open {
+    margin-left: 18rem;
+}
+
+.close {
+    margin-left: 8rem;
 }
