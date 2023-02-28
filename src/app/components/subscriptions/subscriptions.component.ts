@@ -1,22 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Observable } from 'rxjs';
 import { ToggleMenuService } from 'src/app/shared/toggle-menu.service';
 
 @Component({
-  selector: 'app-shorts',
-  templateUrl: './shorts.component.html',
-  styleUrls: ['./shorts.component.scss']
+  selector: 'app-subscriptions',
+  templateUrl: './subscriptions.component.html',
+  styleUrls: ['./subscriptions.component.scss']
 })
-export class ShortsComponent implements OnInit {
+export class SubscriptionsComponent implements OnInit {
   menuStatus!: Observable<boolean>;
-  shorts: { imageChannel: string, nameChannel: string, subtitle: string}[] = [
-    {
-      "imageChannel": "sss",
-      "nameChannel": "Channel",
-      "subtitle": "Aqui vai um exemplo"
-    }
-  ];
 
   constructor(private toggleMenuService: ToggleMenuService) { }
 

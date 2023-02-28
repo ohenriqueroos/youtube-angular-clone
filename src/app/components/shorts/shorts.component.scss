@@ -1,0 +1,42 @@
+// Colors
+$light-dark-color: #222222;
+
+.video-container {
+    padding-top: .5rem;
+    padding-inline: 1rem;
+    width: 20rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $light-dark-color;
+    border-radius: .5rem;
+
+    .video-buttons {
+        display: flex;
+        justify-content: space-between;
+
+        i {
+            font-size: 1.4rem;
+        }
+    }
+
+    .video-channel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-size: .6rem !important;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: .9rem;
+        }
+
+        button {
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,5 +1,20 @@
 <div [ngClass]="(menuStatus | async) ? 'open' : 'close'">
     <div class="container">
-        <p>shorts works!</p>
+        <div class="video-container" *ngFor="let short of shorts">
+            <div class="video-buttons">
+                <i class="bi bi-play-fill"></i>
+                <i class="bi bi-volume-up-fill"></i>
+            </div>
+            <div class="video-infos">
+                <p>{{ short.subtitle }}</p>
+                <div class="video-channel">
+                    <div class="info-channel">
+                        <img src="" alt="">
+                        <span>@{{ short.nameChannel }}</span>
+                    </div>
+                    <button class="btn btn-primary">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
