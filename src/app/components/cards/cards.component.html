@@ -1,3 +1,10 @@
 <div [ngClass]="(menuStatus | async) ? 'open' : 'close'">
+    <div class="row mb-4">
+        <div class="col-12 cards-suggestion">
+            <div class="card-suggestion" *ngFor="let suggestion of suggestions">
+                <button class="btn btn-suggestion">{{ suggestion.title }}</button>
+            </div>
+        </div>
+    </div>
     <app-card></app-card>
 </div>

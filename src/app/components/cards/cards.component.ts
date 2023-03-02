@@ -8,7 +8,17 @@ import { ToggleMenuService } from 'src/app/shared/toggle-menu.service';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent implements OnInit {
-  menuStatus!: Observable<boolean>;
+  menuStatus!: Observable<boolean>
+  suggestions: {title: string}[] = [
+    {"title": "Programação"},
+    {"title": "Ao vivo"},
+    {"title": "Vlogs"},
+    {"title": "Jogos"},
+    {"title": "Enviados recentemente"},
+    {"title": "Música"},
+    {"title": "Angular"},
+    {"title": "React"},
+  ]
   
   constructor(private toggleMenuService: ToggleMenuService) { }
 

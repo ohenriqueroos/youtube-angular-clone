@@ -93,6 +93,19 @@ input {
     background-color: $scroll-color;
 }
 
+.btn-suggestion {
+    width: fit-content;
+    height: fit-content;
+    font-size: .9rem;
+    background-color: $light-dark-color;
+    color: $white-color;
+    transition: $transition;
+}
+
+.btn-suggestion:hover {
+    background-color: $dark-color;
+}
+
 .hidden {
     display: none;
 }
