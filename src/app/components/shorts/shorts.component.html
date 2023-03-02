@@ -1,6 +1,6 @@
 <div [ngClass]="(menuStatus | async) ? 'open' : 'close'">
-    <div class="container">
-        <div class="video-container" *ngFor="let short of shorts">
+    <div class="container" *ngFor="let short of shorts">
+        <div class="video-container">
             <div class="video-buttons">
                 <i class="bi bi-play-fill"></i>
                 <i class="bi bi-volume-up-fill"></i>
@@ -9,11 +9,47 @@
                 <p>{{ short.subtitle }}</p>
                 <div class="video-channel">
                     <div class="info-channel">
-                        <img src="" alt="">
+                        <img [src]="short.imageChannel" alt="Image Channel">
                         <span>@{{ short.nameChannel }}</span>
                     </div>
                     <button class="btn btn-primary">Inscrever-se</button>
                 </div>
+            </div>
+        </div>
+        <div class="video-actions">
+            <div class="actions-button">
+                <button class="btn btn-secondary">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                </button>
+                <p>{{ short.likes }}</p>
+            </div>
+            <div class="actions-button">
+                <button class="btn btn-secondary">
+                    <i class="bi bi-hand-thumbs-down-fill"></i>
+                </button>
+                <p>Não Gostei</p>
+            </div>
+            <div class="actions-button">
+                <button class="btn btn-secondary">
+                    <i class="bi bi-chat-left-text-fill"></i>
+                </button>
+                <p>{{ short.comments }}</p>
+            </div>
+            <div class="actions-button">
+                <button class="btn btn-secondary">
+                    <i class="bi bi-reply-fill"></i>
+                </button>
+                <p>Compartilhar</p>
+            </div>
+            <div class="actions-button">
+                <button class="btn btn-secondary">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+            </div>
+            <div class="actions-button">
+                <a href="#" class="short-audio">
+                    <img src="./assets/img/music_album.jpg" alt="Image Audio">
+                </a>
             </div>
         </div>
     </div>

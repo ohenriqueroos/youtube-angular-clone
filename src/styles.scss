@@ -78,6 +78,21 @@ input {
     border: none;
 }
 
+.btn-secondary {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.4rem;
+    text-align: center;
+    border: none;
+    border-radius: 50rem;
+    background-color: $light-dark-color;
+    transition: $transition;
+}
+
+.btn-secondary:hover {
+    background-color: $scroll-color;
+}
+
 .hidden {
     display: none;
 }

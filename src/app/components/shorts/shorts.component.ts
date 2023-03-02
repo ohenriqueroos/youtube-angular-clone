@@ -10,11 +10,13 @@ import { ToggleMenuService } from 'src/app/shared/toggle-menu.service';
 })
 export class ShortsComponent implements OnInit {
   menuStatus!: Observable<boolean>;
-  shorts: { imageChannel: string, nameChannel: string, subtitle: string}[] = [
+  shorts: { imageChannel: string, nameChannel: string, subtitle: string, likes: string, comments: string}[] = [
     {
-      "imageChannel": "sss",
+      "imageChannel": "./assets/img/img_channel.svg",
       "nameChannel": "Channel",
-      "subtitle": "Aqui vai um exemplo"
+      "subtitle": "Aqui vai um exemplo",
+      "likes": "7,4 mi",
+      "comments": "14 mil"
     }
   ];
 
