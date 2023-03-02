@@ -1,3 +1,4 @@
+import { Short } from './Short';
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
@@ -10,7 +11,7 @@ import { ToggleMenuService } from 'src/app/shared/toggle-menu.service';
 })
 export class ShortsComponent implements OnInit {
   menuStatus!: Observable<boolean>;
-  shorts: { imageChannel: string, nameChannel: string, subtitle: string, likes: string, comments: string}[] = [
+  shorts: Short[] = [
     {
       "imageChannel": "./assets/img/img_channel.svg",
       "nameChannel": "Channel",
