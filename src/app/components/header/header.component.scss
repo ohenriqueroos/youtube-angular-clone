@@ -1,0 +1,11 @@
+$background-color: #000;
+
+header {
+    margin: 0;
+    padding: 1rem 2rem;
+    width: 100vw;
+    height: fit-content;
+    position: fixed;
+    z-index: 100;
+    background-color: $background-color;
+}

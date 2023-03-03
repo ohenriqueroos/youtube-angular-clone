@@ -1,7 +1,7 @@
 <app-header (toggle)="toggleMenu()"></app-header>
-<main class="mt-4">
-    <app-menu [hidden]="closed"></app-menu>
-    <div class="content">
+<main>
+    <app-menu [hidden]="closed" style="margin-top: 5rem;"></app-menu>
+    <div class="content" style="margin-top: 5rem;">
         <router-outlet></router-outlet>
     </div>
 </main>
