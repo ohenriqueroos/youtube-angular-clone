@@ -1,29 +1,31 @@
 <div class="container">
     <div *ngFor="let video of videos" class="card-container">
-        <div class="row">
-            <div class="card-image">
-                <img [src]="video.image" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <div class="card-channel-image">
-                    <img [src]="video.imageChannel" alt="">
+        <a routerLink="video/{{ video.id }}">
+            <div class="row">
+                <div class="card-image">
+                    <img [src]="video.image" alt="">
                 </div>
             </div>
-            <div class="col-10">
-                <div class="row flex-column g-2">
-                    <div class="col">
-                        <h4>{{ video.title }}</h4>
+            <div class="row">
+                <div class="col-2">
+                    <div class="card-channel-image">
+                        <img [src]="video.imageChannel" alt="">
                     </div>
-                    <div class="col">
-                        <a class="name-channel" href="#">
-                            <h5>{{ video.nameChannel }}</h5>
-                        </a>
-                        <span>{{ video.views }} visualizações - há {{ video.days }}</span>
+                </div>
+                <div class="col-10">
+                    <div class="row flex-column g-2">
+                        <div class="col">
+                            <h4>{{ video.title }}</h4>
+                        </div>
+                        <div class="col">
+                            <a class="name-channel" href="#">
+                                <h5>{{ video.nameChannel }}</h5>
+                            </a>
+                            <span>{{ video.views }} visualizações - há {{ video.days }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>

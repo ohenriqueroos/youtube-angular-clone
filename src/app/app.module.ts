@@ -12,6 +12,7 @@ import { CardComponent } from './components/card/card.component';
 import { CardsService } from './shared/cards.service';
 import { ShortsComponent } from './components/shorts/shorts.component';
 import { SubscriptionsComponent } from './components/subscriptions/subscriptions.component';
+import { VideoComponent } from './components/video/video.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SubscriptionsComponent } from './components/subscriptions/subscriptions
     CardComponent,
     ShortsComponent,
     SubscriptionsComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,

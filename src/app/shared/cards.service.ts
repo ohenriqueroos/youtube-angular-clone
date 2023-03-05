@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Card } from '../components/card/Card';
 
+import * as uuid from 'uuid';
+
 @Injectable({
   providedIn: 'root'
 })
