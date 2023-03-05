@@ -1,6 +1,9 @@
 import { CardsService } from './../../shared/cards.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Card } from './Card';
+
+import * as uuid from 'uuid';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-card',
@@ -10,6 +13,7 @@ import { Card } from './Card';
 export class CardComponent implements OnInit {
   videos: any;
   newCard: Card = {
+    id: uuid.v4(),
     image: "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80",
     title: "HTML, CSS and JavaScript Course - 01",
     nameChannel: "Channel",
@@ -23,7 +27,13 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     // this.cards = this.cardsService.cards
     // this.cardsService.addNewCard(this.newCard)
-    this.videos = this.cardsService.getVideos()
-  }
-
+    this.cardsService.getVideos().subscribe(videos => {
+      this.videos = videos as Card[]
+      videos.forEach(element => {
+        const id = uuid.v4().toString();
+        element.id = id
+        console.log(element)
+      });      
+    })
+}
 }

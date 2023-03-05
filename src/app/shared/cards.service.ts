@@ -40,7 +40,7 @@ export class CardsService implements OnInit {
   //     days: "1 dia"
   //   },
   // ];
-  videos: any;
+  videos: Card[] = [];
 
   constructor(private http: HttpClient) {  }
 
