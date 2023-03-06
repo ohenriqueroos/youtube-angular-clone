@@ -17,13 +17,6 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     // this.cards = this.cardsService.cards
     // this.cardsService.addNewCard(this.newCard)
-    this.cardsService.getVideos().subscribe(videos => {
-      this.videos = videos as Card[]
-      videos.forEach(element => {
-        const id = uuid.v4().toString();
-        element.id = id
-        console.log(element)
-      });      
-    })
+    this.cardsService.getVideos()
   }
 }

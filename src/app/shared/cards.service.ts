@@ -42,7 +42,7 @@ export class CardsService implements OnInit {
   //     days: "1 dia"
   //   },
   // ];
-  videos: Card[] = [];
+  videos: any;
 
   constructor(private http: HttpClient) {  }
 
@@ -50,8 +50,25 @@ export class CardsService implements OnInit {
 
   getVideos() {
     const url: string = 'http://localhost:3000/videos'
-    return this.http.get<Card[]>(url)
+    return this.http.get<Card[]>(url).subscribe(videos => {
+      this.videos = videos as Card[]
+      videos.forEach(element => {
+        const id = uuid.v4().toString()
+        element.id = id
+      })
+      console.log(this.videos)
+      return this.videos
+    })
   }
+
+  // this.cardsService.getVideos().subscribe(videos => {
+  //   this.videos = videos as Card[]
+  //   videos.forEach(element => {
+  //     const id = uuid.v4().toString();
+  //     element.id = id
+  //     console.log(element)
+  //   });      
+  // })
 
   addNewCard(card: Card) {
     // this.cards.push(card)

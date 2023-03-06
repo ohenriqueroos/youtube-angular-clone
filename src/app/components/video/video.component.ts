@@ -1,5 +1,5 @@
 import { CardsService } from './../../shared/cards.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ToggleMenuService } from 'src/app/shared/toggle-menu.service';
 import { Card } from '../card/Card';
@@ -17,9 +17,9 @@ export class VideoComponent implements OnInit {
 
   ngOnInit() {
     this.menuStatus = this.toggleMenuService.menuSelected$
-    this.cardsService.getVideos().subscribe(videos => {
-      this.video = videos as Card[]
-      console.log(this.video)
-    })
+    // this.cardsService.getVideos().subscribe(videos => {
+    //   this.video = videos as Card[]
+    //   console.log(this.video)
+    // })
   }
 }
